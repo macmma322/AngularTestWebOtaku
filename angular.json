@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "hello-world": {
+    "AngularTestWebOtaku": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "outputPath": "dist/hello-world",
+            "outputPath": "dist/angular-test-web-otaku",
             "index": "src/index.html",
             "browser": "src/main.ts",
             "polyfills": [
@@ -62,10 +62,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "hello-world:build:production"
+              "buildTarget": "AngularTestWebOtaku:build:production"
             },
             "development": {
-              "buildTarget": "hello-world:build:development"
+              "buildTarget": "AngularTestWebOtaku:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -73,7 +73,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "buildTarget": "hello-world:build"
+            "buildTarget": "AngularTestWebOtaku:build"
           }
         },
         "test": {
@@ -98,6 +98,6 @@
     }
   },
   "cli": {
-    "analytics": "67157f2d-69e8-48cc-8e81-9216bd023121"
+    "analytics": "ce153760-63e4-4ead-b271-8ca1129c43c8"
   }
 }

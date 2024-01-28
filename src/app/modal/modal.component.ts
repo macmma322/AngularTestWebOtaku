@@ -1,37 +1,12 @@
-// Import necessary modules and services
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-modal',
-  templateUrl: './modal.component.html', // Replace with the path to your HTML file
-  styleUrls: ['./modal.component.css'], // Replace with the path to your CSS file
+  standalone: true,
+  imports: [],
+  templateUrl: './modal.component.html',
+  styleUrl: './modal.component.css'
 })
-export class ModalComponent implements OnInit {
-  modalClosed = true;
+export class ModalComponent {
 
-  ngOnInit() {
-    this.checkAndDisplayModal();
-  }
-
-  closeModal() {
-    this.modalClosed = true;
-  }
-
-  checkAndDisplayModal() {
-    let pageViews = localStorage.getItem('pageViews');
-    this.closeModal();
-
-    if (!pageViews) {
-      pageViews = '1';
-    } else {
-      const parsedPageViews = parseInt(pageViews, 10);
-      pageViews = (parsedPageViews + 1).toString();
-    }
-
-    localStorage.setItem('pageViews', pageViews);
-
-    if (parseInt(pageViews, 10) % 100 === 0) {
-      this.modalClosed = false;
-    }
-  }
 }
